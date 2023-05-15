@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <style>
+        .form-inline {  
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+    @media (max-width: 800px) {
+        .form-inline input {
+          margin: 10px 0;
+        }
+        
+        .form-inline {
+          flex-direction: row;
+          align-items: stretch;
+        }
+      }
+  .button {
+   
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: rgb(33, 10, 151);
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(97, 128, 221);
+}
+      </style>
+    <div class="row centered-form center-block ">
+        <div class="container col-md-6 col-md-offset-3">
+            <br>
+            <br>
+            <p>Add product</p>
+             
+  <section id="container">
+    <form  class="form-inline" action="http://localhost:3000/addProduct" method="POST" target="_self">
+      
+
+      <section class="input">
+       <label class="control-label" for="text" class="lab">Product_id: </label>
+        <input class="form-control"  type="text" class="in"  name="Product_id"  required>
+      </section>
+
+      <section class="input">
+       <label class="control-label" for="text" class="lab">Product_name: </label>
+        <input class="form-control"  class="in"  name="Product_name" required>
+      </section>
+
+      <section class="input">
+        <label class="control-label" for="text" class="lab">Product_price: </label>
+        <input class="form-control"  type="tel" class="in"  name="product_price" required>
+      </section>
+
+      <section class="input">
+       <label class="control-label" for="text" class="lab">Catagory_id: </label>
+        <input  class="form-control" class="in"  name="Catagory_id" minlength="4" required>
+      </section>
+
+      <section class="input">
+        <input type="submit"  class="button"  value="SUBMIT" >    
+      </section>
+     
+    </form>
+</section>
+
+
+<p>Delete product</p>
+             
+<section id="container">
+  <form  class="form-inline" action="http://localhost:3000/deleteProduct" method="POST" target="_self">
+    
+
+    <section class="input">
+     <label class="control-label" for="text" class="lab">Product_id: </label>
+      <input class="form-control"  type="text" class="in"  name="Product_id"  required>
+    </section>
+
+    <section class="input">
+     <label class="control-label" for="text" class="lab">Product_name: </label>
+      <input class="form-control"  class="in"  name="Product_name" required>
+    </section>
+
+    <section class="input">
+      <label class="control-label" for="text" class="lab">Product_price: </label>
+      <input class="form-control"  type="tel" class="in"  name="product_price" required>
+    </section>
+
+    <section class="input">
+     <label class="control-label" for="text" class="lab">Catagory_id: </label>
+      <input  class="form-control" class="in"  name="Catagory_id" minlength="4" required>
+    </section>
+
+    <section class="input">
+      <input type="submit"  class="button"  value="SUBMIT" >    
+    </section>
+   
+  </form>
+</section>
+
+          
+      
+          
+     
+</body>
